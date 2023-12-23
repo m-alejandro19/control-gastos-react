@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const Filtros = ({filtro, setFiltro}) => {
     return (
@@ -10,7 +10,6 @@ const Filtros = ({filtro, setFiltro}) => {
                             name="" 
                             id=""
                             value={filtro}
-                            // BUSCAR UN MEJOR EVENTO
                             onChange={e => setFiltro(e.target.value)}
                     >
                         <option value="">-- Todas las Categorías --</option>
@@ -28,4 +27,4 @@ const Filtros = ({filtro, setFiltro}) => {
     )
 }
 
-export default Filtros
+export default Filtros;

@@ -1,6 +1,6 @@
-import {useState} from 'react'
+import {useState} from 'react';
 
-import Mensaje from './Mensaje'
+import Mensaje from './Mensaje';
 
 const NuevoPresupuesto = ({presupuesto, setPresupuesto, setIsValidPresupuesto}) => {
 
@@ -13,7 +13,7 @@ const NuevoPresupuesto = ({presupuesto, setPresupuesto, setIsValidPresupuesto}) 
             setMensaje('No es un presupuesto valido');
             return
         } 
-        setMensaje('')
+        setMensaje('');
 
         setIsValidPresupuesto(true);
          
@@ -43,4 +43,4 @@ const NuevoPresupuesto = ({presupuesto, setPresupuesto, setIsValidPresupuesto}) 
   )
 }
 
-export default NuevoPresupuesto
+export default NuevoPresupuesto;

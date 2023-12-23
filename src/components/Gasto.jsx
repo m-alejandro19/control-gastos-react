@@ -5,17 +5,17 @@ import {
     SwipeAction,
     TrailingActions,
   } from "react-swipeable-list";
-  import "react-swipeable-list/dist/styles.css"
+  import "react-swipeable-list/dist/styles.css";
 
-import { formatearFecha, formatearCantidad } from "../helpers"
+import { formatearFecha, formatearCantidad } from "../helpers";
 
-import IconoAhorro from '../img/icono_ahorro.svg'
-import IconoCasa from '../img/icono_casa.svg'
-import IconoComida from '../img/icono_comida.svg'
-import IconoGastos from '../img/icono_gastos.svg'
-import IconoOcio from '../img/icono_ocio.svg'
-import IconoSalud from '../img/icono_salud.svg'
-import IconoSuscripciones from '../img/icono_suscripciones.svg'
+import IconoAhorro from '../img/icono_ahorro.svg';
+import IconoCasa from '../img/icono_casa.svg';
+import IconoComida from '../img/icono_comida.svg';
+import IconoGastos from '../img/icono_gastos.svg';
+import IconoOcio from '../img/icono_ocio.svg';
+import IconoSalud from '../img/icono_salud.svg';
+import IconoSuscripciones from '../img/icono_suscripciones.svg';
 
 const dicionarioIconos = {
     ahorro: IconoAhorro,
@@ -25,11 +25,11 @@ const dicionarioIconos = {
     ocio: IconoOcio,
     salud: IconoSalud,
     suscripciones: IconoSuscripciones
-}
+};
 
 const Gasto = ({gasto, setGastoEditar, eliminarGasto}) => {
 
-    const {categoria, nombre, cantidad, id, fecha} = gasto
+    const {categoria, nombre, cantidad, id, fecha} = gasto;
 
     const leadingActions = () => (
         <LeadingActions>
@@ -37,7 +37,7 @@ const Gasto = ({gasto, setGastoEditar, eliminarGasto}) => {
                 Editar
             </SwipeAction>
         </LeadingActions>
-    )
+    );
 
     const trailingActions = () => (
         <TrailingActions>
@@ -45,7 +45,7 @@ const Gasto = ({gasto, setGastoEditar, eliminarGasto}) => {
                 Eliminar
             </SwipeAction>
         </TrailingActions>
-    )
+    );
 
     return(
         <SwipeableList>
@@ -55,7 +55,6 @@ const Gasto = ({gasto, setGastoEditar, eliminarGasto}) => {
             >
                 <div className="gasto sombra">
                     <div className="contenido-gasto">
-                        {/* MUESTRA IMAGEN DE LA CATEGORIA DE FORMA DINAMICA GRACIAS AL DICCIONARIO DE DATOS */}
                         <img 
                             src={dicionarioIconos[categoria]} 
                             alt="imagen-categoria" 
@@ -73,6 +72,6 @@ const Gasto = ({gasto, setGastoEditar, eliminarGasto}) => {
             </SwipeableListItem>
         </SwipeableList>
     )
-}
+};
 
-export default Gasto
+export default Gasto;
