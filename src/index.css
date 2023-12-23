@@ -39,7 +39,7 @@ h2 {
     -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
     background-color: var(--blanco);
-    padding: 4rem;
+    padding: 1rem;
     border-radius: 1.2rem;
 }
 
@@ -185,6 +185,8 @@ header h1 {
 .formulario input[type="number"].nuevo-presupuesto {
     font-size: 2.8rem;
     text-align: center;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .contenedor-presupuesto svg {
@@ -236,17 +238,17 @@ main {
 }
 
 .filtros .campo {
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 2rem;
 }
 .filtros label {
+    text-align: center;
     font-size: 3rem;
     font-weight: 900;
     color: var(--gris-oscuro);
 }
 .filtros select {
-    flex: 1;
     padding: 1rem;
     border: none;
     border-radius: 1rem;
@@ -270,7 +272,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: .5rem;
     margin-bottom: 2rem;
     width: 100%;
 }
@@ -286,11 +288,14 @@ main {
     align-items: center;
     gap: 2rem;
 }
-
 .contenido-gasto img {
-    width: 10rem;
+    width: 5rem;
 }
-
+@media (min-width: 768px) {
+    .contenido-gasto img {
+        width: 10rem;
+    }
+}
 .descripcion-gasto p {
     margin: 0 0 0.3rem 0;
 }
