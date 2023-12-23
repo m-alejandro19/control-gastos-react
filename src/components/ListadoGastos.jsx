@@ -1,4 +1,4 @@
-import Gasto from './Gasto'
+import Gasto from './Gasto';
 
 const ListadoGastos = ({gastos, setGastoEditar, eliminarGasto, filtro, gastosFiltrados}) => {
     
@@ -41,4 +41,4 @@ const ListadoGastos = ({gastos, setGastoEditar, eliminarGasto, filtro, gastosFil
     )
 }
 
-export default ListadoGastos
+export default ListadoGastos;

@@ -1,8 +1,8 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 
-import Mensaje from './Mensaje'
+import Mensaje from './Mensaje';
 
-import Cerrar from '../img/cerrar.svg'
+import Cerrar from '../img/cerrar.svg';
 
 const Modal = ({
     setModal, 
@@ -16,39 +16,28 @@ const Modal = ({
     const [nombre, setNombre] = useState('');
     const [cantidad, setCantidad] = useState('');
     const [categoria, setCategoria] = useState('');
-    //ID PARA VERIFICAR SI SE ESTA EDITANDO O AGREGANDO UN NUEVO REGISTRO
     const [id, setId] = useState('');
     const [fecha, setFecha] = useState('');
 
     const [mensaje, setMensaje] = useState('');
 
     useEffect(() => {
-        //SI SE ESTA EDITANDO UNO
         if(Object.keys(gastoEditar).length > 0){
-
             setNombre(gastoEditar.nombre);
             setCantidad(gastoEditar.cantidad);
             setCategoria(gastoEditar.categoria);
             setId(gastoEditar.id);
             setFecha(gastoEditar.fecha);
         }
-        //SI ES UN REGISTRO NUEVO
-        
-    }, [])
+    }, []);
 
     const ocultarModal = () => {
-        //OCULTA EL FORMULARIO
         setAnimarModal(false);
-
         setGastoEditar({});
-
-        //OCULTA EL MODAL
         setTimeout(() => {
             setModal(false);
         }, 1000)
-    }
-
-    //FUNCION DEL FORMULARIO
+    };
     const handleSubmit = e => {
         e.preventDefault();
 
@@ -60,9 +49,8 @@ const Modal = ({
             }, 3000)
             return
         }
-        guardarGasto({nombre, cantidad, categoria, id, fecha})
-
-    }
+        guardarGasto({nombre, cantidad, categoria, id, fecha});
+    };
 
   return (
     <div className="modal">
@@ -125,4 +113,4 @@ const Modal = ({
   )
 }
 
-export default Modal
+export default Modal;

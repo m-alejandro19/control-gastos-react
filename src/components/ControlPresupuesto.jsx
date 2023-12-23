@@ -1,35 +1,32 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
+import {CircularProgressbar, buildStyles} from 'react-circular-progressbar';
 
-import {CircularProgressbar, buildStyles} from 'react-circular-progressbar'
-//HOJA DE ESTILOS
-import 'react-circular-progressbar/dist/styles.css'
+import 'react-circular-progressbar/dist/styles.css';
 
-import {formatearCantidad} from '../helpers'
+import {formatearCantidad} from '../helpers';
 
 const ControlPresupuesto = ({presupuesto, setPresupuesto, gastos, setGastos, setIsValidPresupuesto}) => {
 
     const [disponible, setDisponible] = useState(0);
-    const [gastado, setGastado] = useState(0)
-
+    const [gastado, setGastado] = useState(0);
     const [porcentaje, setPorcentaje] = useState(0);
 
     useEffect(() => {
-                                                                              //GASTADO INICIA EN 0
+                                                                              
         const totalGastado = gastos.reduce((total, gasto) => gasto.cantidad + total, 0);
 
         const totalDisponible = presupuesto - totalGastado;
 
-        setDisponible(totalDisponible)
+        setDisponible(totalDisponible);
 
         setGastado(totalGastado);
 
-        //CALCULAR PORCENTAJE                                                            FORMATEA A 2 DECIMALES
         const nuevoPorcentaje = (((presupuesto - totalDisponible) / presupuesto ) * 100).toFixed(2);
 
         setTimeout(() => {
             setPorcentaje(nuevoPorcentaje);
-        }, 1500)
+        }, 1500);
 
     }, [gastos])
 
@@ -41,7 +38,7 @@ const ControlPresupuesto = ({presupuesto, setPresupuesto, gastos, setGastos, set
             setPresupuesto(0);
             setIsValidPresupuesto(false);
         }
-    }
+    };
 
   return (
     <div className="contenedor-presupuesto contenedor sombra dos-columnas">
@@ -81,4 +78,4 @@ const ControlPresupuesto = ({presupuesto, setPresupuesto, gastos, setGastos, set
   )
 }
 
-export default ControlPresupuesto
+export default ControlPresupuesto;
