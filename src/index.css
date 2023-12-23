@@ -39,7 +39,7 @@ h2 {
     -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
     background-color: var(--blanco);
-    padding: 4rem;
+    padding: 1rem;
     border-radius: 1.2rem;
 }
 
@@ -55,11 +55,9 @@ header h1 {
 
     text-transform: uppercase;
 }
-
 .formulario {
     width: 95%;
-    margin: 0 auto;
-    padding: 10rem 0;
+    margin: 10rem auto;
 }
 @media (min-width: 768px) {
     .formulario {
@@ -155,40 +153,48 @@ header h1 {
 }
 .contenedor-presupuesto {
     margin-top: -5rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     transform: translateY(5rem);
 }
 .dos-columnas {
     flex-direction: column;
 }
 .dos-columnas :first-child {
-    margin-bottom: 4rem;
+    margin-bottom: rem;
 }
 @media (min-width: 768px) {
     .dos-columnas {
         flex-direction: row;
         align-items: center;
-        gap: 4rem;
     }
     .dos-columnas > div {
         width: 50%;
     }
     .dos-columnas :first-child {
-        margin-bottom: 0;
+    
+    }
+}
+.gastato {
+    margin-top: 1rem;
+    color: var(--gris-oscuro);
+}
+@media (min-width: 768px){
+    .gastato {
+        margin: 0 3rem 0 1rem;
     }
 }
 .formulario input[type="text"].nuevo-presupuesto, 
 .formulario input[type="number"].nuevo-presupuesto {
     font-size: 2.8rem;
     text-align: center;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .contenedor-presupuesto svg {
-    width: 25rem;
+    width: 100%;
 }
 
 .contenido-presupuesto {
@@ -236,17 +242,17 @@ main {
 }
 
 .filtros .campo {
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 2rem;
 }
 .filtros label {
+    text-align: center;
     font-size: 3rem;
     font-weight: 900;
     color: var(--gris-oscuro);
 }
 .filtros select {
-    flex: 1;
     padding: 1rem;
     border: none;
     border-radius: 1rem;
@@ -270,7 +276,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: .5rem;
     margin-bottom: 2rem;
     width: 100%;
 }
@@ -286,11 +292,14 @@ main {
     align-items: center;
     gap: 2rem;
 }
-
 .contenido-gasto img {
-    width: 10rem;
+    width: 5rem;
 }
-
+@media (min-width: 768px) {
+    .contenido-gasto img {
+        width: 10rem;
+    }
+}
 .descripcion-gasto p {
     margin: 0 0 0.3rem 0;
 }
