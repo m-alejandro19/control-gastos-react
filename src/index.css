@@ -55,11 +55,9 @@ header h1 {
 
     text-transform: uppercase;
 }
-
 .formulario {
     width: 95%;
-    margin: 0 auto;
-    padding: 10rem 0;
+    margin: 10rem auto;
 }
 @media (min-width: 768px) {
     .formulario {
@@ -155,30 +153,36 @@ header h1 {
 }
 .contenedor-presupuesto {
     margin-top: -5rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     transform: translateY(5rem);
 }
 .dos-columnas {
     flex-direction: column;
 }
 .dos-columnas :first-child {
-    margin-bottom: 4rem;
+    margin-bottom: rem;
 }
 @media (min-width: 768px) {
     .dos-columnas {
         flex-direction: row;
         align-items: center;
-        gap: 4rem;
     }
     .dos-columnas > div {
         width: 50%;
     }
     .dos-columnas :first-child {
-        margin-bottom: 0;
+    
+    }
+}
+.gastato {
+    margin-top: 1rem;
+    color: var(--gris-oscuro);
+}
+@media (min-width: 768px){
+    .gastato {
+        margin: 0 3rem 0 1rem;
     }
 }
 .formulario input[type="text"].nuevo-presupuesto, 
@@ -190,7 +194,7 @@ header h1 {
 }
 
 .contenedor-presupuesto svg {
-    width: 25rem;
+    width: 100%;
 }
 
 .contenido-presupuesto {

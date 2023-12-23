@@ -45,7 +45,7 @@ const ControlPresupuesto = ({presupuesto, setPresupuesto, gastos, setGastos, set
         <div>
             <CircularProgressbar
                     value={porcentaje}
-                    text={`${porcentaje}% Gastado`}
+                    text={`${porcentaje}%`}
                     background
                     backgroundPadding={6}
                     styles={buildStyles({
@@ -56,6 +56,7 @@ const ControlPresupuesto = ({presupuesto, setPresupuesto, gastos, setGastos, set
                     })}
             />
         </div>
+        <h2 className="gastato">Gastado</h2>
         <div className="contenido-presupuesto">
             <button
                 className="reset-app"
